@@ -5,13 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "leaflet": "^1.7.1",
     "next": "12.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-leaflet": "^3.2.2",
+    "sass": "^1.43.4",
+    "swiper": "^7.2.0"
   },
   "devDependencies": {
     "eslint": "7",
