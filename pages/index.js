@@ -1,9 +1,6 @@
 import Slider from "../components/Slide";
-import dynamic from "next/dynamic";
 import Footer from "../components/Footer";
 import Link from "next/link"
-
-const Mapa = dynamic(() => import("../components/Mapa"), { ssr: false });
 
 export default function Home() {
   return (
