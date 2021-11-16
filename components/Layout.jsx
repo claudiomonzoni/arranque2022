@@ -64,6 +64,8 @@ export default function Layout({ children, titulo, descripcion }) {
       <Nav></Nav>
 
       <main>{children}</main>
+
+      <Footer></Footer>
     </div>
   );
 }

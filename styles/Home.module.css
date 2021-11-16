@@ -110,7 +110,11 @@
 
 .slider{
   width: 100%;
+  
+}
+.swiper-slide{
   border: solid;
+  height: 200px;
 }
 .mapa{
   width: 100%;

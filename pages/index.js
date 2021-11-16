@@ -9,6 +9,9 @@ export default function Home() {
         <section>
           <h1>Aqui va todo el home</h1>
         </section>
+        <section className="slider">
+<Slider></Slider>
+        </section>
       </Layout>
     </div>
   );
