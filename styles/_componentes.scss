@@ -156,8 +156,13 @@ nav {
   }
 }
 
+// agregamos padding a todo lo que este debajo de nav
+nav + main {
+  padding-top: 80px;
+}
+
 @include cel {
-  nav + section {
+  nav + main {
     padding-top: 80px;
   }
 }
@@ -168,11 +173,7 @@ nav {
     fill: $azulOscuro;
   }
 }
-// agregamos padding a todo lo que este debajo de nav
 
-nav + section {
-  padding-top: 90px;
-}
 
 // mapa y slider react
 .slider{
@@ -184,3 +185,13 @@ nav + section {
   height: 500px;
   border: solid;
 }
+// item en slide
+.item{
+  background-color: black;
+  height: 2000px;
+}
+// contenedor general del contenido
+// #conteHome{
+//   margin-top: 5rem;
+//   border: solid #000;
+// }

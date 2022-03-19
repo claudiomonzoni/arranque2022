@@ -28,11 +28,26 @@ export default function Slider() {
         }}
         className="MiSlide"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+          Slide 1 aqui
+          </div>
+          </SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+          Slide 2 aqui
+          </div>
+          </SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+          Slide 3 aqui
+          </div>
+          </SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+          Slide 4 aqui
+          </div>
+          </SwiperSlide>
       </Swiper>
     </div>
   );
