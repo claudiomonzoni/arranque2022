@@ -1,44 +1,49 @@
 import Link from "next/link";
 import { useEffect } from "react";
+//para usar active class en el menu
+import { useRouter } from "next/router";
 
 export default function Nav() {
+  
+  //menu efecto al hacer scroll
   useEffect(function onFirstMount() {
-    //menu efecto al hacer scroll
     const body = document.getElementById("nav");
     let lastScroll = 0;
-
+    
     window.addEventListener("scroll", () => {
       const currentScroll = window.pageYOffset;
       if (currentScroll <= 0) {
         body.classList.remove("scroll-up");
         return;
       }
-
+      
       if (
         currentScroll > lastScroll &&
         !body.classList.contains("scroll-down")
-      ) {
-        body.classList.remove("scroll-up");
-        body.classList.add("scroll-down");
-      } else if (
-        currentScroll < lastScroll &&
-        body.classList.contains("scroll-down")
-      ) {
-        body.classList.remove("scroll-down");
-        body.classList.add("scroll-up");
-      }
-      lastScroll = currentScroll;
-    });
-
-    return () => {
-      window.removeEventListener("scroll", function () {
-        return;
-      });
-    };
-  }, []);
-
-  return (
-    <nav id="nav">
+        ) {
+          body.classList.remove("scroll-up");
+          body.classList.add("scroll-down");
+        } else if (
+          currentScroll < lastScroll &&
+          body.classList.contains("scroll-down")
+          ) {
+            body.classList.remove("scroll-down");
+            body.classList.add("scroll-up");
+          }
+          lastScroll = currentScroll;
+        });
+        
+        return () => {
+          window.removeEventListener("scroll", function () {
+            return;
+          });
+        };
+      }, []);
+      
+      // useRauter para usar active class en el menu
+      const router = useRouter();
+      return (
+        <nav id="nav">
       <button className="menu-toggle">Menu</button>
       <div className="logo">
         <Link href="/">
@@ -49,7 +54,9 @@ export default function Nav() {
       </div>
       <ul>
         <li>
-          <a href="#">item 1</a>
+          <Link href="/acerca">
+          <a className={router.pathname == "/acerca" ? "active" : "" }>Acerca</a>
+          </Link>
         </li>
         <li>
           <a href="#">item 2</a>
@@ -59,7 +66,7 @@ export default function Nav() {
         </li>
         <li>
           <Link href="/contacto">
-            <a>Contacto</a>
+            <a className={router.pathname == "/contacto" ? "active" : ""}>Contacto</a>
           </Link>
         </li>
       </ul>
