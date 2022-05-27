@@ -7,7 +7,7 @@ const dataFix = {
   edad: "43",
 };
 
-export const dataProvider = ({ children }) => {
+export const DataProvider = ({ children }) => {
     const [data, setData] = useState(dataFix);
 
   return(

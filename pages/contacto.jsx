@@ -2,7 +2,11 @@ import dynamic from "next/dynamic";
 const Mapa = dynamic(() => import("../components/Mapa"), { ssr: false });
 import Layout from "../components/Layout";
 
+import { useContext } from "react";
+import { DataContext } from "../context/dataContext";
+
 export default function contacto() {
+  const { data } = useContext(DataContext);
     return (
 
       <Layout 
@@ -15,6 +19,9 @@ export default function contacto() {
           <Mapa></Mapa>
         </div>
       </section>
+      <pre>
+        {JSON.stringify(data, null, 2)}
+      </pre>
 
       </Layout>
 
