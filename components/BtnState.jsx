@@ -1,17 +1,8 @@
-import { useDatos } from "../context/dataContext"
-
-const data = {
-  Nombre: "Angel",
-  Apellido: "Monzoni ",
-  edad: "20'",
-};
+import { useDatos } from "../context/dataContext";
 
 
 export default function BtnState() {
-  const {setData } = useDatos();
-  return (
-    <botton onClick={()=>setData(data)}>
-      Cambiar el state
-      </botton>
-  )
+  const { getDatos } = useDatos();
+
+  return <botton onClick={() => getDatos()}>Cambiar el state</botton>;
 }
