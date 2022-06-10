@@ -16,10 +16,15 @@ const dataInicial = {
   edad: "43",
 };
 
-
+//inicio los datos iniciales con dataInicial
 const [datos, dispatch] = useReducer(datosReducer, dataInicial)
+
 const getDatos = async () => {
 const res= await axios.get("https://jsonplaceholder.typicode.com/users");
+console.log(res.data);
+}
+const getUsuario = async (id) => {
+const res= await axios.get("https://jsonplaceholder.typicode.com/users"+id);
 console.log(res.data);
 }
 
@@ -32,6 +37,7 @@ const SET_DATOS = "SET_DATOS";
       value={{
         datos,
         getDatos,
+        getUsuario,
       }}
     >
       {children}

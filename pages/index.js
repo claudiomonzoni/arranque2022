@@ -1,6 +1,7 @@
 import Slider from "../components/Slide";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
+import ListadeUsuarios from "../components/ListadeUsuarios";
 import Nav from "../components/Nav";
 
 
@@ -14,6 +15,9 @@ export default function Home() {
         </section>
         <section className="slider">
           <Slider></Slider>
+        </section>
+        <section>
+          <ListadeUsuarios />
         </section>
       </Layout>
     </div>
