@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import { useDatos } from "../context/dataContext";
 
 export default function contacto() {
-  const { data } = useDatos();
+  const { datos } = useDatos();
   return (
     <Layout
       titulo="Soy el contacto"
@@ -18,7 +18,7 @@ export default function contacto() {
           <Mapa></Mapa>
         </div>
       </section>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <pre>{JSON.stringify(datos, null, 2)}</pre>
       <BtnState />
     </Layout>
   );

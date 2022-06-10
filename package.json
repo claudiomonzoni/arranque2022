@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "formik": "^2.2.9",
     "framer-motion": "^5.2.1",
     "leaflet": "^1.7.1",
