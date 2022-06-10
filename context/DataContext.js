@@ -23,6 +23,8 @@ const res= await axios.get("https://jsonplaceholder.typicode.com/users");
 console.log(res.data);
 }
 
+const SET_DATOS = "SET_DATOS";
+
 // creo componente que estará envolviendo y proveyendo los demas componentes en _app
 
   return (
