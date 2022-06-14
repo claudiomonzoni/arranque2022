@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createContext, useReducer, useContext } from "react";
-import {datosReducer} from "../reducer/datosReducer";
+import { datosReducer } from "../reducer/datosReducer";
 export const DataContext = createContext();
 
 // Funcion para no estar importando el useContext en los componentes
@@ -9,28 +9,32 @@ export const useDatos = () => {
 };
 
 export const DataProvider = ({ children }) => {
+  const laurl = "https://jsonplaceholder.typicode.com/users/";
 
-const dataInicial = {
-  Nombre: "Claudio",
-  Apellido: "Monzoni Nogueda",
-  edad: "43",
-};
+  const dataInicial = {
+    Nombre: "Claudio",
+    Apellido: "Monzoni Nogueda",
+    edad: "43",
+  };
 
-//inicio los datos iniciales con dataInicial
-const [datos, dispatch] = useReducer(datosReducer, dataInicial)
+  //inicio los datos iniciales con dataInicial
+  const [datos, dispatch] = useReducer(datosReducer, dataInicial);
+  
 
-const getDatos = async () => {
-const res= await axios.get("https://jsonplaceholder.typicode.com/users");
-console.log(res.data);
-}
-const getUsuario = async (id) => {
-const res= await axios.get("https://jsonplaceholder.typicode.com/users"+id);
-console.log(res.data);
-}
+  const getDatos = async () => {
+    const res = await axios.get(laurl);
+    dispatch({
+      type: "GET_DATOS",
+      payload: res.data,
+    });
+  };
+  const getUsuario = async (id) => {
+    const res = await axios.get(laurl + id);
+    console.log(res.data);
+  };
 
-const SET_DATOS = "SET_DATOS";
 
-// creo componente que estará envolviendo y proveyendo los demas componentes en _app
+  // creo componente que estará envolviendo y proveyendo los demas componentes en _app
 
   return (
     <DataContext.Provider
