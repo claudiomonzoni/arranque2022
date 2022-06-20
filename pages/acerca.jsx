@@ -2,7 +2,7 @@ import Layout from "../components/Layout"
 import { useContext } from "react"
 import { DataContext } from "../context/dataContext"
 
-export default function acerca(){
+export default function Acerca(){
     const { datos } = useContext(DataContext)
 
     return(

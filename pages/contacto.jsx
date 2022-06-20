@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 
 import { useDatos } from "../context/dataContext";
 
-export default function contacto() {
+export default function Contacto() {
   const { datos } = useDatos();
   return (
     <Layout
