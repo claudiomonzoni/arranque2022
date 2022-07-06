@@ -17,7 +17,7 @@ export default function Contacto() {
         </div>
       </section>
       <section>
-      <ListadeUsuarios />
+      {/* <ListadeUsuarios /> */}
       </section>
     </Layout>
   );
