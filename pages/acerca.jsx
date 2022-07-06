@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import { useContext } from "react";
-import { DataContext } from "../context/dataContext";
+import { DataContext } from "../context/DataContext";
 import { useEffect } from "react";
 import Listadeusuariosprops  from "../components/Listadeusuariosprops";
 
