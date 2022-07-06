@@ -2,7 +2,7 @@ import axios from "axios";
 import { createContext, useReducer, useContext } from "react";
 import { datosReducer } from "../reducer/datosReducer";
 export const DataContext = createContext();
-
+//Resulta que netlify es case sensitive y github no cambia los nombres de los archivos si no cambias nada
 // Funcion para no estar importando el useContext en los componentes
 export const useDatos = () => {
   return useContext(DataContext);
