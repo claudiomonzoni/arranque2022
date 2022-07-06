@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDatos } from "../context/dataContext";
+import {useDatos} from '../context/dataContext';
 
 export default function ListadeUsuarios() {
   const { getDatos, datos } = useDatos();
