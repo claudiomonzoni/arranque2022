@@ -1,12 +1,10 @@
 import dynamic from "next/dynamic";
-import BtnState from "../components/BtnState";
 const Mapa = dynamic(() => import("../components/Mapa"), { ssr: false });
 import Layout from "../components/Layout";
+import ListadeUsuarios from "../components/ListadeUsuarios";
 
-import { useDatos } from "../context/dataContext";
+export default function Contacto() {
 
-export default function contacto() {
-  const { datos } = useDatos();
   return (
     <Layout
       titulo="Soy el contacto"
@@ -18,8 +16,9 @@ export default function contacto() {
           <Mapa></Mapa>
         </div>
       </section>
-      <pre>{JSON.stringify(datos, null, 2)}</pre>
-      <BtnState />
+      <section>
+      <ListadeUsuarios />
+      </section>
     </Layout>
   );
 }

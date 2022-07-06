@@ -21,11 +21,12 @@ export const DataProvider = ({ children }) => {
   const [datos, dispatch] = useReducer(datosReducer, dataInicial);
   
 
-  const getDatos = async () => {
-    const res = await axios.get(laurl);
+  const getDatos = async (res) => {
+    //ahora envio los datos desde props de las secciones, en este caso viene de acerca
+    // const res = await axios.get(laurl);
     dispatch({
       type: "GET_DATOS",
-      payload: res.data,
+      payload: res
     });
   };
   const getUsuario = async (id) => {
