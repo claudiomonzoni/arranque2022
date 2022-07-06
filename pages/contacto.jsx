@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 const Mapa = dynamic(() => import("../components/Mapa"), { ssr: false });
 import Layout from "../components/Layout";
-// import ListadeUsuarios from "../components/ListadeUsuarios";
+import ListadeUsuarios from "../components/ListadeUsuarios";
 
 export default function Contacto() {
 

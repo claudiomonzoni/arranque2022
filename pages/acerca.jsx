@@ -20,6 +20,7 @@ export default function Acerca(props) {
       <section>
         <h2>Acerca de </h2>
         <hr />
+        <p>datos desde getStaticprops</p>
         <Listadeusuariosprops props={losdatos} />
       </section>
     </Layout>
