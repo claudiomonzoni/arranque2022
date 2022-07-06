@@ -4,9 +4,8 @@ import Layout from "../components/Layout";
 import ListadeUsuarios from "../components/ListadeUsuarios";
 import Nav from "../components/Nav";
 
-
-
 export default function Home() {
+
   return (
     <div>
       <Layout titulo="Soy el home" descripcion="Soy la descripcion del home">

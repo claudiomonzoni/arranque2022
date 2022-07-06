@@ -27,10 +27,11 @@ export const DataProvider = ({ children }) => {
       type: "GET_DATOS",
       payload: res.data,
     });
+
   };
   const getUsuario = async (id) => {
     const res = await axios.get(laurl + id);
-    console.log(res.data);
+
   };
 
 
