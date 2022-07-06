@@ -96,7 +96,7 @@ export default function Nav() {
       <ul>
         <li>
           <Link href="/acerca">
-          <a className={router.pathname == "/acerca" ? "active" : "" }>Acerca</a>
+          <a className={router.pathname == "/Acerca" ? "active" : "" }>Acerca</a>
           </Link>
         </li>
         <li>

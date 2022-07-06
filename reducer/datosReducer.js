@@ -1,6 +1,6 @@
 import { GET_DATOS, GET_USUARIOS } from "./types";
 
-export const datosReducer = (state = {}, action) => {
+export const datosReducer = (state = [], action) => {
   const { type, payload } = action;
   switch (type) {
     case "GET_DATOS":

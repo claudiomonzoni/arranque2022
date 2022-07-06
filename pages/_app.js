@@ -1,5 +1,5 @@
 import '../styles/style.scss'
-import { DataProvider } from '../context/dataContext'
+import { DataProvider } from '../context/DataContext'
 
 function MyApp({ Component, pageProps }) {
   return(

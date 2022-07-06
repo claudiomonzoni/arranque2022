@@ -1,19 +1,30 @@
 import { useEffect } from "react";
-import { useDatos } from "../context/dataContext";
+import { useDatos } from "../context/DataContext";
 
 export default function ListadeUsuarios() {
-  const { getDatos, datos } = useDatos();
+  const { datos } = useDatos();
   useEffect(() => {
-    getDatos(); 
+    // datos;
   }, []);
   return (
     <div>
-      <h1>ListadeUsuarios</h1>
+      <h2>Lista de usuarios desde context</h2>
+      <p>
+        Esta lista la cargo desde context y esta vacia hasta que entro a la
+        sección de acerca donde desde getStaticprops cargo la api y despues con
+        useEffect inyecto los props a context, solo como experimento, no hay uso
+        real.
+      </p>
 
       {
-      console.log(datos.datos)
+      
+      datos.datos ? datos.datos.map((usuario, index) => (
+        <div key={index}>
+          <p>{usuario.name}</p>
+        </div>
+      ))
+      : null
       }
-      <pre>{JSON.stringify(datos, null, 2)}</pre>
     </div>
   );
 }
