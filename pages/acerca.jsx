@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import { useEffect } from "react";
-import Listadeusuariosprops  from "../components/Listadeusuariosprops";
+import Listadeusuariosprops from "../components/Listadeusuariosprops";
 
 export default function Acerca(props) {
   const { losdatos } = props;

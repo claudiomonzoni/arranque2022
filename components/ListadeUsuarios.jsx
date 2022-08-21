@@ -3,9 +3,7 @@ import { useDatos } from "../context/DataContext";
 
 export default function ListadeUsuarios() {
   const { datos } = useDatos();
-  useEffect(() => {
-    // datos;
-  }, []);
+
   return (
     <div>
       <h2>Lista de usuarios desde context</h2>

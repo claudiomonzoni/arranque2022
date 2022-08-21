@@ -100,7 +100,9 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <a href="#">item 2</a>
+          <Link href="/contentful">
+          <a href={router.pathname=="/contentful" ? "active" : ""}>Datos de Contentful</a>
+          </Link>
         </li>
         <li>
           <a href="#">item 3</a>
