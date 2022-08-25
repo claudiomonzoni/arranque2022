@@ -1,4 +1,4 @@
-import { GET_DATOS, GET_USUARIOS } from "./types";
+import { GET_DATOS, GET_CONTENTFUL } from "./types";
 
 export const datosReducer = (state = [], action) => {
   const { type, payload } = action;
@@ -9,6 +9,10 @@ export const datosReducer = (state = [], action) => {
         datos: payload,
         ...state
       };
+    case "GET_CONTENTFUL":
+      return {
+        datos: payload,
+        }
     default:
       return state;
   }

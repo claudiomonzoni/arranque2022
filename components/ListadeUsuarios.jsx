@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useDatos } from "../context/DataContext";
 
 export default function ListadeUsuarios() {

@@ -1,10 +1,18 @@
+import { DataContext } from "../context/DataContext";
+import { useContext } from "react";
+import { useEffect } from "react";
+
 export default function DesdeContenful() {
+  const { getContentful, datos } = useContext(DataContext);
+  getContentful();
+  
+  useEffect(() => {
+    console.log(datos.datos.items)
+    }, []);
   return (
     <div>
       <h2>Lista de usuarios desde contenful y context</h2>
-      <p>
-        hacer consolo log
-      </p>
+      <p>hacer consolo log</p>
 
       {/* {
       
@@ -16,5 +24,5 @@ export default function DesdeContenful() {
       : null
       } */}
     </div>
-  )
+  );
 }

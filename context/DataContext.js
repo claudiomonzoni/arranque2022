@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createContext, useReducer, useContext } from "react";
-import contentful from "contentful";
+import contentful from "../contentful";
 import { datosReducer } from "../reducer/datosReducer";
 export const DataContext = createContext();
 //Resulta que netlify es case sensitive y github no cambia los nombres de los archivos si no cambias nada
@@ -28,14 +28,19 @@ export const DataProvider = ({ children }) => {
   };
   const getContentful = async () => {
     // const res = await axios.get(laurl + id);
-    let res = await contentful.getEntries({
-      id: datos.datos[0].id,
+    let respuesta = await contentful.getEntries({
+      // id: datos.datos[0].id,
       content_type: "resortRooms",
       //order: "sys.createdAt"
       // order: "fields.price"
       //precio en reversa
       order: "-fields.price",
     });
+    dispatch({
+      type: "GET_CONTENTFUL",
+      payload: respuesta,
+    })
+    // console.log(respuesta);
   };
 
   // creo componente que estará envolviendo y proveyendo los demas componentes en _app
