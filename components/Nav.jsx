@@ -105,8 +105,8 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="/firebase">
-          <a className={router.pathname == "/firebase" ? "active" : ""} >Firebase</a>
+          <Link href="/fire">
+          <a className={router.pathname == "/fire" ? "active" : ""} >Fire</a>
           </Link>
         </li>
         <li>
