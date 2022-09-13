@@ -20,7 +20,7 @@ export default function Acerca(props) {
       <section>
         <h2>Acerca de </h2>
         <hr />
-        <p>datos desde getStaticprops</p>
+        <p>datos desde getStaticprops, en esta seccion cargo los datos del api con staticProps y los inserto en el context, es por eso que en la seccion de contacto esta vacia sin entrar aqui primero</p>
         <Listadeusuariosprops props={losdatos} />
       </section>
     </Layout>

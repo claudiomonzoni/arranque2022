@@ -4,25 +4,26 @@ import { useEffect } from "react";
 
 export default function DesdeContenful() {
   const { getContentful, datos } = useContext(DataContext);
-  getContentful();
-  
   useEffect(() => {
-    console.log(datos.datos.items)
-    }, []);
+    getContentful();
+  }, []);
+
   return (
     <div>
       <h2>Lista de usuarios desde contenful y context</h2>
-      <p>hacer consolo log</p>
-
-      {/* {
+      <p>
+        hacer consolo log, primero devuelve undefined y luego si trae los datos
+      </p>
+      {console.log(datos.datos)}
+       {
+      // datos.datos ? datos.datos.map((items, index) => (
+      //   <div key={index}>
+      //     <p>{console.log(items)}</p>
+      //   </div>
+      // ))
+      // : null
       
-      datos.datos ? datos.datos.map((usuario, index) => (
-        <div key={index}>
-          <p>{usuario.name}</p>
-        </div>
-      ))
-      : null
-      } */}
+      } 
     </div>
   );
 }

@@ -36,11 +36,13 @@ export const DataProvider = ({ children }) => {
       //precio en reversa
       order: "-fields.price",
     });
+    
     dispatch({
       type: "GET_CONTENTFUL",
       payload: respuesta,
     })
     // console.log(respuesta);
+    console.log("datosss")
   };
 
   // creo componente que estará envolviendo y proveyendo los demas componentes en _app
