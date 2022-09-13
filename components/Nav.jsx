@@ -101,11 +101,13 @@ export default function Nav() {
         </li>
         <li>
           <Link href="/contentful">
-          <a href={router.pathname=="/contentful" ? "active" : ""}>Datos de Contentful</a>
+          <a className={router.pathname=="/contentful" ? "active" : ""}>Datos de Contentful</a>
           </Link>
         </li>
         <li>
-          <a href="#">item 3</a>
+          <Link href="/firebase">
+          <a className={router.pathname == "/firebase" ? "active" : ""} >Firebase</a>
+          </Link>
         </li>
         <li>
           <Link href="/contacto">
