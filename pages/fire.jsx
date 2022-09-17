@@ -51,7 +51,7 @@ export default function fire() {
       <div>
         <h1>Aqui las pruebas de firebase</h1>
         <p>empezamos con el login</p>
-        <bottom className="btn" onClick={()=>{logearse()}}>Logearse</bottom>
+        <button className="btn" onClick={()=>{logearse()}}>Logearse</button>
         {/* <StyledFirebaseAuth uiConfig={uiConfig} firebase={firebase.auth} /> */}
       </div>
     </Layout>
