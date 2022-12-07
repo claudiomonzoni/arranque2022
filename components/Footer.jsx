@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import '../js/app'
 export default function Footer() {
     return (

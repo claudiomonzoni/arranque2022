@@ -1,7 +1,7 @@
 import Head from "next/head";
 // import estilo from "../styles/globals.scss";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import icono from "../public/favicon.ico";
 
 import Nav from "./Nav";

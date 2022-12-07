@@ -27,6 +27,7 @@ export default function Acerca(props) {
   );
 }
 
+// getStaticProps getServerSideProps
 export async function getStaticProps(props) {
   const laurl = "https://jsonplaceholder.typicode.com/users/";
   const res = await fetch(laurl);
