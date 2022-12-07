@@ -11,7 +11,7 @@ export const datosReducer = (state = [], action) => {
       };
     case "GET_CONTENTFUL":
       return {
-        datos: payload,
+        res: payload,
         }
     default:
       return state;
