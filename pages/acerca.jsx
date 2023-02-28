@@ -1,16 +1,15 @@
 import Layout from "../components/Layout";
-import { useContext } from "react";
-import { DataContext } from "../context/DataContext";
-import { useEffect } from "react";
+// import { useContext } from "react";
+// import { DataContext } from "../context/DataContext";
+// import { useEffect } from "react";
 import Listadeusuariosprops from "../components/Listadeusuariosprops";
 
 export default function Acerca(props) {
   const { losdatos } = props;
-  const { getDatos } = useContext(DataContext);
-  useEffect(() => {
-    //actualizo el context con la funcion getDatos
-    getDatos(losdatos);
-  }, []);
+  // useEffect(() => {
+  //   //actualizo el context con la funcion getDatos
+  //   getDatos(losdatos);
+  // }, []);
 
   return (
     <Layout
@@ -20,7 +19,7 @@ export default function Acerca(props) {
       <section>
         <h2>Acerca de </h2>
         <hr />
-        <p>datos desde getStaticprops</p>
+        <p>datos desde getServerSideProps</p>
         <Listadeusuariosprops props={losdatos} />
       </section>
     </Layout>
